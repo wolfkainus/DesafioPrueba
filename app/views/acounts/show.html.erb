@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @acount.client %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @acount.description %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @acount.balance %>
+</p>
+
+<p>
+  <strong>Acount tipe:</strong>
+  <%= @acount.acount_tipe %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @acount.date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @acount.amount %>
+</p>
+
+<%= link_to 'Edit', edit_acount_path(@acount) %> |
+<%= link_to 'Back', acounts_path %>

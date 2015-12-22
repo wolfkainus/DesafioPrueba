@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Acounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Description</th>
+      <th>Balance</th>
+      <th>Acount tipe</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acounts.each do |acount| %>
+      <tr>
+        <td><%= acount.client %></td>
+        <td><%= acount.description %></td>
+        <td><%= acount.balance %></td>
+        <td><%= acount.acount_tipe %></td>
+        <td><%= acount.date %></td>
+        <td><%= acount.amount %></td>
+        <td><%= link_to 'Show', acount %></td>
+        <td><%= link_to 'Edit', edit_acount_path(acount) %></td>
+        <td><%= link_to 'Destroy', acount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Acount', new_acount_path %>
